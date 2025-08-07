@@ -75,3 +75,13 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.25)
 test_=0.25=> training 75 and test 25git
 # 
 """
+
+#convert the text into vector  for machine understanfing ((embedding))
+# #use input only 
+
+from sklearn.feature_extraction.text import TfidfVectorizer
+vectorization=TfidfVectorizer()
+xv_train=vectorization.fit_transform(x_train)
+xv_test=vectorization.transform(x_test)
+
+#
